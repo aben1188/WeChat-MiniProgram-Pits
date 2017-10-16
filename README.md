@@ -4,6 +4,7 @@
 - **WebSocket URL中不能带有端口**
 
 	用于创建WebSocket连接的wx.connectSocket API中的URL不能带有端口，比如下面的写法是错误的：
+
 		wx.connectSocket({
 			url: 'wss://xxx.abc.com:4343'
 		})
