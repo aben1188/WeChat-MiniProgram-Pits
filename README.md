@@ -1,7 +1,7 @@
 # WeChat-MiniProgram-Pits
 ## 微信小程序开发过程中的那些坑
 
-<br />
+<br>
 
 - **WebSocket URL中不能带有端口**
 
