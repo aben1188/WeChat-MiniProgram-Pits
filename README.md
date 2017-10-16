@@ -1,6 +1,8 @@
 # WeChat-MiniProgram-Pits
 ## 微信小程序开发过程中所踩过的那些坑......
+
 <br>
+
 - **WebSocket URL中不能带有端口**
 
 	用于创建WebSocket连接的wx.connectSocket API中的URL不能带有端口，比如下面的写法是错误的：
