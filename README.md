@@ -22,4 +22,4 @@
 
 - **.wpy文件中注释掉一个view不生效（基于wepy框架开发遇到的问题）**
 
-	参见wepy仓库中的这个issue：https://github.com/wepyjs/wepy/issues/418。不过据issue中wepy开发者Gcaufy的回复，这个问题他一直无法复现，很可能是特定于IDE的问题。目前的解决方案是一旦出现这个问题，只能重新手动wepy build一次。
+	参见wepy仓库中的这个[ issue ](https://github.com/wepyjs/wepy/issues/418)。不过据issue中wepy开发者Gcaufy的回复，这个问题他一直无法复现，很可能是特定于IDE的问题。目前的解决方案是一旦出现这个问题，只能重新手动wepy build一次。
