@@ -57,10 +57,10 @@
 
 	因为二者本质上是同一个控件。所以：
 	
-		后面的hideLoading 自动隐藏前面的 showToast；
-		后面的 hideToast 自动隐藏前面的 showLoading；
-		后面的 showLoading 自动覆盖前面的 showToast，显示 Loading；
-		后面的 showToast 自动覆盖前面的 showLoading，显示 Toast。
+		后面的hideLoading 会隐藏前面的 showToast；
+		后面的 hideToast 会隐藏前面的 showLoading；
+		后面的 showLoading 会覆盖前面的 showToast，显示 Loading；
+		后面的 showToast 会覆盖前面的 showLoading，显示 Toast。
 	
 	2017/10/24
 
