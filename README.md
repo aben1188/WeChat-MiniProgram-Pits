@@ -56,6 +56,7 @@
 	toast会一闪而过，这是因为它刚显示出来就被hideLoading()隐藏掉了。
 
 	因为二者本质上是同一个控件。所以：
+	
 		后面的hideLoading 自动隐藏前面的 showToast；
 		后面的 hideToast 自动隐藏前面的 showLoading；
 		后面的 showLoading 自动覆盖前面的 showToast，显示 Loading；
