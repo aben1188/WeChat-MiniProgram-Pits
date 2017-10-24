@@ -46,20 +46,19 @@
 
 - #### **showToast、showLoading、hideToast、hideLoading会互相影响**
 
-	以前微信小程序没有loading效果的API，只能通过toast来实现。自基础库1.1.0开始多了wx.showLoading()和wx.hideLoading()。但是注意，loading本质上和toast一回事，可认为loading是toast的封装版，专门针对需要显示加载数据提示toast的场景。
+	以前微信小程序没有loading效果的API，只能通过toast来实现。自基础库1.1.0开始多了wx.showLoading()和wx.hideLoading()。但是注意，loading本质上和toast是一回事，可认为loading是toast的封装版，适用于专门针对需要显示加载数据提示的场景。
 
 	因此：
 
-		wx.showToast({ title: "成功" }); 
+		wx.showToast({title: "成功"}); 
 		wx.hideLoading();
 
-	如上代码，toast会一闪而过，这是因为它刚显示出来，就被hideLoading()隐藏掉了。
+	toast会一闪而过，这是因为它刚显示出来就被hideLoading()隐藏掉了。
 
 	因为二者本质上是同一个控件。所以：
-
-		后面的 hideLoading 自动关闭前面的 showToast。
-		后面的 hideToast 自动关闭前面的 showLoading。
-		后面的 showLoading 自动覆盖前面的 showToast，显示 Loading。
+		后面的hideLoading 自动隐藏前面的 showToast；
+		后面的 hideToast 自动隐藏前面的 showLoading；
+		后面的 showLoading 自动覆盖前面的 showToast，显示 Loading；
 		后面的 showToast 自动覆盖前面的 showLoading，显示 Toast。
 	
 	2017/10/24
