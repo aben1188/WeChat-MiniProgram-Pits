@@ -46,7 +46,7 @@
 
 - #### **showToast、showLoading、hideToast、hideLoading会互相影响**
 
-	以前微信小程序没有loading效果的API，只能通过toast来实现。自基础库1.1.0开始多了wx.showLoading()和wx.hideLoading()。但是注意，loading本质上和toast是一回事，可认为loading是toast的封装版，适用于专门针对需要显示加载数据提示的场景。
+	以前微信小程序没有loading效果的API，只能通过toast来实现。自基础库1.1.0开始多了wx.showLoading()和wx.hideLoading()。但是注意，loading本质上和toast是一回事，可认为loading是toast的封装版，适用于专门针对需要显示数据加载提示的场景。
 
 	因此：
 
@@ -63,5 +63,25 @@
 		后面的 showToast 会覆盖前面的 showLoading，从而显示 Toast。
 	
 	2017/10/24
+
+- #### **引入自定义模块文件时，必须使用相对路径（基于wepy框架开发遇到的问题）**
+
+	引入自定义模块时，千万不能只写模块名称，即便被引入的模块文件与所引入它的那个文件在同一个目录下，也必须在其前面写上一般可省略不写的表示当前目录的“./”，否则可能导致依赖于node环境的wepy在编译时错误引入node的同名核心模块或node_modules中的同名第三方模块，从而报错：
+	```
+	[Error] Error: 找不到模块: crypto
+	被依赖于: E:\LypData\MyDev\zxq\node_modules\request\lib\helpers.js。
+	请尝试手动执行 npm install crypto 进行安装。
+	```
+	这是由于某个文件需要引入同目录下的request文件，于是按照一般的写法习惯性地省略了表示当前目录的“./”，写作了：
+	```
+	import request from 'request'
+	```
+	而在node环境下，不能省略表示当前目录的“./”，必须写作：
+	```
+	import request from './request'
+	```
+	具体可参考：[《require()源码解读（阮一峰）》](http://www.ruanyifeng.com/blog/2015/05/require.html)一文的第一节“一、require() 的基本用法”
+
+	2017/11/01
 
 ### （未完待续，欢迎pr！）
