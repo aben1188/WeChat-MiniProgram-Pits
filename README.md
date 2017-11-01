@@ -80,7 +80,7 @@
 	```
 	import request from './request'
 	```
-	具体可参考：[《require()源码解读（阮一峰）》](http://www.ruanyifeng.com/blog/2015/05/require.html)一文的第一节“一、require() 的基本用法”
+	具体可参考：[《require()源码解读（阮一峰）》](http://www.ruanyifeng.com/blog/2015/05/require.html)一文的第一节“一、require() 的基本用法”。
 
 	2017/11/01
 
