@@ -72,6 +72,8 @@
 	被依赖于: E:\LypData\MyDev\zxq\node_modules\request\lib\helpers.js。
 	请尝试手动执行 npm install crypto 进行安装。
 	```
+	![image](https://github.com/aben1188/WeChat-MiniProgram-Pits/blob/master/images/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20171101205428.png)
+	
 	这是由于某个文件需要引入同目录下的request文件，于是按照一般的写法习惯性地省略了表示当前目录的“./”，写作了：
 	```
 	import request from 'request'
