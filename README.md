@@ -84,6 +84,17 @@
 	```
 	具体可参考：[《require()源码解读（阮一峰）》](http://www.ruanyifeng.com/blog/2015/05/require.html)一文的第一节“一、require() 的基本用法”。
 
-	2017/11/01
+	
+- #### **使用了wepy-plugin-autoprefixer后build时报错（基于wepy框架开发遇到的问题）**
+
+	使用了wepy-plugin-autoprefixer之后，将会导致src目录下的.wxss文件在wepy build时出错：TypeError: Cannot read property 'type' of null：
+	
+	![image](https://github.com/aben1188/WeChat-MiniProgram-Pits/blob/master/images/QQ%E6%88%AA%E5%9B%BE20171102162656.jpg)
+	
+	可参见wepy-plugin-autoprefixer仓库中的这个[issue](https://github.com/li-xianfeng/wepy-plugin-a)。
+	
+    这是由src目录下的.wxss文件所导致，具体原因不明。目前的解决办法是，将src目录下的.wxss文件改为.scss文件（由于scss的语法兼容css语法，而wxss实际就是css，因此只需改文件后缀即可，无需修改文件内容）
+
+	2017/11/02
 
 ### （未完待续，欢迎pr！）
